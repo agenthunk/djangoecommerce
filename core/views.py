@@ -3,4 +3,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Umbrella Corps')
+    texts = ['Testando a parada', 'Muito doido isso véi'];
+
+    context = {
+        'title': 'django e-commerce',
+        'texts': texts
+    }
+    return render(request, 'index.html', context)
